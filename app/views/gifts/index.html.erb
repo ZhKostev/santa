@@ -1,0 +1,51 @@
+<section class="row col-md-12" id="top-bg">
+</section>
+
+<header class="row">
+  <h1 class="text-center col-md-6 col-md-offset-3 white-text" style="font-weight: bolder">Secret santa M3 2015/2016</h1>
+</header>
+<% if @secret_santa.already_santa? %>
+  <section class="row well col-md-6 col-md-offset-3">
+    <% if @secret_santa.errors.any? %>
+      <h3 class="text-center h2"><%= @secret_santa.errors.join(', ') %></h3>
+  <% else %>
+      <h3 class="text-center h2">You are secret santa for "<%= @secret_santa.gift_recipient.recipient %>"!</h3>
+    <% end %>
+    <h3 class="text-center h3">This will help you:</h3>
+    <section class="col-md-6 col-md-offset-3">
+      <br/>
+      <p class="text-center" id="quote_body"><%= @secret_santa.quote.body.html_safe %></p>
+    </section>
+  </section>
+<% else %>
+  <section class="row">
+    <%= form_tag gifts_path do %>
+      <div class="form-group well col-md-6 col-md-offset-3 <%= 'has-error' if @secret_santa.errors.any? %>">
+        <%= text_field_tag :grantor, params[:grantor],
+                           :class => "form-control",
+                           :placeholder => 'Please enter your name' %>
+        <% if @secret_santa.errors.any? %>
+          <div class="alert-error">
+            <ul>
+              <% @secret_santa.errors.each do |error_msg| %>
+                <li><%= error_msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <h5>Possible names</h5>
+        <ul id="possible-names-list">
+          <% @secret_santa.valid_names.each do |name| %>
+            <li><%= name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="form-group col-md-6 col-md-offset-3 text-center">
+        <%= submit_tag 'Be a great secret santa!', :class => 'btn btn-primary btn-lg' %>
+      </div>
+    <% end %>
+  </section>
+<% end %>
+
+<section class="row col-md-12" id="footer-bg">
+</section>

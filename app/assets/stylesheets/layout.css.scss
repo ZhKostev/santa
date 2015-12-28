@@ -1,0 +1,30 @@
+html, body, .wrapper, .content-wrapper {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.white-text {
+  color: #ffffff !important;
+}
+
+.wrapper, .content-wrapper {
+  background: asset_url("main-bg.jpg") repeat !important;
+}
+
+.content-wrapper {
+  margin-left: 0 !important;
+}
+
+#footer-bg {
+  height: 70px;
+  margin-top: 70px;
+  background: asset_url("bottom.png") repeat !important;
+  position: absolute;
+  bottom: 0;
+}
+
+#top-bg {
+  height: 148px;
+  margin-bottom: 50px;
+  background: asset_url("top.png") repeat !important;
+}
