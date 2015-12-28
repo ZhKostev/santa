@@ -53,7 +53,6 @@ class SecretSantaGenerator
   end
 
   def fetch_random_gift_grantor
-    binding.pry unless $stop_pry
     rand_index = rand(gift_grantors_without_grantor.size - 1)
 
     gift_grantors_without_grantor.select { |gg| gg.recipient != params[:grantor] }[rand_index]
