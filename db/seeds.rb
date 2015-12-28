@@ -12,13 +12,13 @@ GiftGrantor.delete_all
 end
 Quote.delete_all
 [
-  'Come, gentlemen, I hope we shall drink down all unkindness. <br/> <b>William Shakespeare</b>',
-  'The new year stands before us, like a chapter in a book, waiting to be written. We can help write that story by setting goals. <br/> <b>Melody Beattie</b>',
-  'I never worry about being driven to drink; I just worry about being driven home.<br/><b>W. C. Fields</b>',
-  'I believe that if life gives you lemons, you should make lemonade... And try to find somebody whose life has given them vodka, and have a party.<br/><b>Ron White</b>',
-  'Wine is constant proof that God loves us and loves to see us happy.<br/><b>Benjamin Franklin</b>',
-  "If you're going to do something tonight that you'll be sorry for tomorrow morning, sleep late.<br/><b>Henny Youngman</b>",
-  "Go to Heaven for the climate, Hell for the company.<br/><b>Mark Twain</b>"
+  'Come, gentlemen, I hope we shall drink down all unkindness. <br/> <b>(c) William Shakespeare</b>',
+  'The new year stands before us, like a chapter in a book, waiting to be written. We can help write that story by setting goals. <br/> <b>(c) Melody Beattie</b>',
+  'I never worry about being driven to drink; I just worry about being driven home.<br/><b>(c) W. C. Fields</b>',
+  'I believe that if life gives you lemons, you should make lemonade... And try to find somebody whose life has given them vodka, and have a party.<br/><b>(c) Ron White</b>',
+  'Wine is constant proof that God loves us and loves to see us happy.<br/><b>(c) Benjamin Franklin</b>',
+  "If you're going to do something tonight that you'll be sorry for tomorrow morning, sleep late.<br/><b>(c) Henny Youngman</b>",
+  "Go to Heaven for the climate, Hell for the company.<br/><b>(c) Mark Twain</b>"
 ].each do |quote_body|
   Quote.create!(:body => quote_body)
 end

@@ -13,7 +13,7 @@ class SecretSantaGenerator
   def generate
     return false if params_not_valid?
     if (@gift_recipient = fetch_gift_recipient).present?
-      @errors << "You've already participated! Contact Admin santa for details."
+      @errors << "You've already participated! Contact Admin santa for details!"
       false
     else
       @gift_recipient = fetch_random_gift_grantor
