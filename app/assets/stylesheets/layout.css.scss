@@ -8,7 +8,7 @@ html, body, .wrapper, .content-wrapper {
 }
 
 .wrapper, .content-wrapper {
-  background: asset_url("main-bg.jpg") repeat !important;
+  background: image_url("main-bg.jpg") repeat !important;
 }
 
 .content-wrapper {
@@ -18,7 +18,7 @@ html, body, .wrapper, .content-wrapper {
 #footer-bg {
   height: 70px;
   margin-top: 70px;
-  background: asset_url("bottom.png") repeat !important;
+  background: image_url("bottom.png") repeat !important;
   position: absolute;
   bottom: 0;
 }
@@ -26,5 +26,5 @@ html, body, .wrapper, .content-wrapper {
 #top-bg {
   height: 148px;
   margin-bottom: 50px;
-  background: asset_url("top.png") repeat !important;
+  background: image_url("top.png") repeat !important;
 }
